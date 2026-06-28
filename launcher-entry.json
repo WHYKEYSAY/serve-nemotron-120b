@@ -1,7 +1,6 @@
 {
   "name": "nemotron-120b",
   "backend": "llamacpp",
-  "manager": "direct",
   "extra_args": [
     "-fit",
     "on",

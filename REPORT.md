@@ -19,7 +19,7 @@ on` loaded it first try** — the same lever that rescued Leanstral.
 ## Serving configuration
 | Param | Value |
 |---|---|
-| Backend | llama.cpp build-master, `mctl switch nemotron` :8018 |
+| Backend | llama.cpp build-master, :8018 |
 | Quant | **UD-IQ4_NL, 61 GB, 3 shards** (unsloth dynamic; ≈Q4_K_M quality at 4.5 bpw — chosen to honor the Q4 floor) |
 | Placement | **`-fit on`** — no manual `--n-cpu-moe`/`--tensor-split` |
 | KV / ctx / fa | `--cache-type-k/v q8_0` · 4096 · `-fa on` |
@@ -49,4 +49,4 @@ bandwidth-bound signature. Neither has spec-decode, so both sit well below the M
 ~2× slower than 122B-MTP because it lacks speculative decoding. A solid NVIDIA-stack 120B option. **Disk: candidate for
 cleanup** (not a designated keeper). The headline is the **`-fit on` rescue** of a model that twice OOM'd on manual tuning.
 
-_2026-06-27 · `-fit on`, 7-workload clean run, UD-IQ4_NL (Q4 floor) · keyingd · >120B offload-class survey._
+_2026-06-27 · `-fit on`, 7-workload clean run, UD-IQ4_NL (Q4 floor) · the test rig · >120B offload-class survey._

@@ -1,0 +1,18 @@
+{
+  "name": "nemotron-120b",
+  "backend": "llamacpp",
+  "manager": "direct",
+  "extra_args": [
+    "-fit",
+    "on",
+    "-fa",
+    "on",
+    "--cache-type-k",
+    "q8_0",
+    "--cache-type-v",
+    "q8_0",
+    "-c",
+    "4096"
+  ],
+  "note": "Nemotron-3-Super-120B-A12B"
+}
